@@ -9,7 +9,7 @@ def get_fan_conf():
     config = configparser.ConfigParser()
     config.read("config.ini")
 
-    url = 'http://饭太硬.top/tv'
+    url = 'http://www.饭太硬.com/tv/'
     response = requests.get(url, headers=headers)
     match = re.search(r'[A-Za-z0]{8}\*\*(.*)', response.text)
 
@@ -60,23 +60,16 @@ def get_fan_conf():
             f.write(response.content)
 
 def diy_conf(content):
-    content = content.replace('https://fanty.run.goorm.site/ext/js/drpy2.min.js', './JS/lib/drpy2.min.js')
-    content = content.replace('公众号【神秘的哥哥们】', '豆瓣')
-    # pattern = r'{"key":"Bili"(.)*\n{"key":"Biliych"(.)*\n'
-    # replacement = ''
-    # content = re.sub(pattern, replacement, content)
-    pattern = r'{"key":"csp_Nbys"(.|\n)*(?={"key":"cc")'
+    content = content.replace('备用公众号【叨观荐影】', '豆瓣')
+    pattern = r'{"key":"Bili"(.)*\n{"key":"Biliych"(.)*\n'
     replacement = ''
     content = re.sub(pattern, replacement, content)
 
     return content
 
 def local_conf(content):
-    pattern = r'{"key":"4KHDR".*'
-    replacement = r'{"key":"drpy_js_荐片","name":"荐片[js]","type":3,"api":"./JS/lib/drpy2.min.js","searchable":1,"quickSearch":1,"changeable":1,"ext":"./JS/js/荐片.js","timeout":30},\n{"key":"drpy_js_磁力熊搜索","name":"磁力熊搜索[js]","type":3,"api":"./JS/lib/drpy2.min.js","ext":"./JS/js/cilixiong.js","searchable":0,"quickSearch":0,"changeable":1},'
-    content = re.sub(pattern, replacement, content)
-    pattern = r'{"key":"88js"(.|\n)*(?={"key":"YiSo")'
-    replacement = r'{"key":"drpy_js_爱看","name":"影视 | 爱看[js]","type":3,"api":"./JS/lib/drpy2.min.js","ext":"./JS/js/爱看.js"},\n{"key":"drpy_js_美剧网","name":"影视 | 美剧网[js]","type":3,"api":"./JS/lib/drpy2.min.js","ext":"./JS/js/美剧网.js"},\n{"key":"百度","name":"百度┃采集","type":1,"api":"https://api.apibdzy.com/api.php/provide/vod?ac=list","searchable":1,"filterable":0},\n{"key":"量子","name":"量子┃采集","type":0,"api":"https://cj.lziapi.com/api.php/provide/vod/at/xml/","searchable":1,"changeable":1},\n{"key":"非凡","name":"非凡┃采集","type":0,"api":"http://cj.ffzyapi.com/api.php/provide/vod/at/xml/","searchable":1,"changeable":1},\n{"key":"暴風","name":"暴風┃采集","type":1,"api":"https://bfzyapi.com/api.php/provide/vod/?ac=list","searchable":1,"changeable":1},\n{"key":"yaya","name":"鸭鸭┃App","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"ext":"https://yayayaaapp.ynf.icu/api.php/app/"},\n{"key":"tiantang","name":"天堂┃App","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"ext":"http://dytt996.com/api.php/app/"},\n{"key":"探探","name":"探探","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://ytcms.lyyytv.cn/api.php/app/"},\n{"key":"明帝","name":"明帝","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://ys.md214.cn/api.php/app/"},\n{"key":"dr_兔小贝","name":"📚儿童┃启蒙","type":3,"api":"./JS/lib/drpy2.min.js","ext":"https://fanty.run.goorm.site/ext/%E5%85%94%E5%B0%8F%E8%B4%9D.js","style":{"type":"rect","ratio":1.597},"searchable": 0,"quickSearch": 0,"changeable":0},\n{"key":"少儿教育","name":"📚少儿┃教育","type":3,"api":"csp_Bili","style":{"type":"rect","ratio":1.597},"searchable":0,"quickSearch":0,"changeable":0,"ext":"https://fanty.run.goorm.site/ext/少儿教育.json"},\n'
+    pattern = r'{"key":"\d+看球"(.|\n)*(?={"key":"Aid")'
+    replacement = r'{"key":"百度","name":"百度┃采集","type":1,"api":"https://api.apibdzy.com/api.php/provide/vod?ac=list","searchable":1,"filterable":0},\n{"key":"量子","name":"量子┃采集","type":0,"api":"https://cj.lziapi.com/api.php/provide/vod/at/xml/","searchable":1,"changeable":1},\n{"key":"非凡","name":"非凡┃采集","type":0,"api":"http://cj.ffzyapi.com/api.php/provide/vod/at/xml/","searchable":1,"changeable":1},\n{"key":"暴風","name":"暴風┃采集","type":1,"api":"https://bfzyapi.com/api.php/provide/vod/?ac=list","searchable":1,"changeable":1},\n{"key":"索尼","name":"索尼┃采集","type":1,"api":"https://suoniapi.com/api.php/provide/vod","searchable":1,"changeable":1},\n'
     content = re.sub(pattern, replacement, content)
     return content
 if __name__ == '__main__':

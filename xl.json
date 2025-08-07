@@ -1,14 +1,16 @@
 {"urls": [
-{"url": "https://ghproxy.net/https://raw.githubusercontent.com/loopool/fan/main/a.json","name": "自用"},
-{"url": "clan://localhost/TVBox/a.json","name": "本地"},
-{"url": "https://饭太硬.top/tv","name": "饭太硬"},
-{"url": "http://肥猫.love","name": "肥猫"},
-{"url": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/XC.json","name": "南风"},
-{"url": "https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/0821.json","name": "高天流云"},
-{"url": "https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json","name": "高天流云js"},
-{"url": "https://tvbox.cainisi.cf","name": "菜妮丝"},
-{"url": "http://xhww.fun:63/小米/DEMO.json","name": "小米"},
-{"url": "https://jihulab.com/yw88075/tvbox/-/raw/main/yw.json","name": "心魔"}
-
+{"url": "https://v.muzid.eu.org/a.json","name": "自用"},
+{"url": "http://www.饭太硬.com/tv/","name": "饭太硬"},
+{"url": "https://mpanso.me/DEMO.json","name": "小米"},
+{"url": "http://肥猫.com/","name": "肥猫"},
+{"url": "http://tvbox.xn--4kq62z5rby2qupq9ub.top/","name": "王二小"},
+{"url": "http://我不是.摸鱼儿.com","name": "摸鱼儿"},
+{"url": "https://7337.kstore.space/twvip/自用测试.json","name": "天微"},
+{"url": "http://ok321.top/tv","name": "ok哥"},
+{"url": "https://fmbox.cc","name": "星辰"},
+{"url": "http://www.fish2018.us.kg/p/jsm.json","name": "PG"},
+{"url": "https://tvbox.catvod.com/catvod.json","name": "Catvod"},
+{"url": "http://box.ufuzi.com/tv/qq/短剧频道/api.json","name": "短剧"},
+{"url": "https://jihulab.com/ymz1231/xymz/-/raw/main/ymshaoer","name": "少儿"}
 ]
 }
